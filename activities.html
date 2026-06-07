@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MY JOURNEY</title>
+
+    <style>
+        body{
+            background: url('maroon background.jpg');
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        h1{
+            color: white;
+            background: rgba(255, 192, 203, 0.5);
+            margin-top: 30px;
+        }
+
+        .gallery{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .gallery img{
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .button{
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
+            background: #b76572;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>LET'S EXPLORE 𓆝 𓆟 𓆞</h1>
+ <style>
+        body{
+            text-align:center;
+            font-family:Arial;
+        }
+
+        .gallery img{
+            width:250px;
+            margin:10px;
+            border-radius:10px;
+        }
+
+        .back-btn{
+            display:inline-block;
+            margin-top:20px;
+            padding:10px 20px;
+            background:maroon;
+            color:white;
+            text-decoration:none;
+            border-radius:5px;
+        }
+
+        .caption{
+                margin-top: 10px;
+                font-size: 20px;
+                color: black;
+                background: rgb(177, 87, 102);
+                padding: 10px;
+                text-align: center;
+        }
+
+        #popup{
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.9);
+                justify-content: center;
+                align-items: center;
+                z-index: 999;
+        }
+
+        #popup img{
+                max-width: 90%;
+                max-height: 90%;
+                border-radius: 15px;
+}
+        
+    </style>
+
+
+    <div class="gallery">
+        <div class="item">
+            <img src="GALLERY\HOBBY\ACTIVITIES\HIKING 1.jpg" alt="club" onclick="showPopup(this.src)">
+        <div class="caption">HIKING AT GUNUNG BANANG</div>
+        </div>
+        
+        <div class="item">
+            <img src="GALLERY\HOBBY\ACTIVITIES\WATERFALL (2).jpg" alt="AWARD" onclick="showPopup(this.src)">
+        <div class="caption">WATERFALL AT GUNUNG BERLUMUT</div>
+        </div>
+
+        <div class="item">
+            <img src="GALLERY\HOBBY\ACTIVITIES\HIKING 4.jpg" alt="scott" onclick="showPopup(this.src)">
+        <div class="caption">HIKING AT LATA KIJANG</div>
+        </div>
+    
+        <div class="item">
+            <img src="GALLERY\HOBBY\ACTIVITIES\ACTIVITIES 1.jpg" alt="scott" onclick="showPopup(this.src)">
+        <div class="caption">PETANQUE GAME </div>
+        </div>
+
+        <div class="item">
+            <img src="GALLERY\HOBBY\ACTIVITIES\HIKING 3.jpg" alt="ART PROJECT" onclick="showPopup(this.src)">
+        <div class="caption">HIKING AT BUKIT BOTAK </div>
+        </div>
+
+        
+    </div>
+
+
+    <a href="hobby.html" class="button">BACK</a>
+
+    <div id="popup" onclick="closeImage()">
+    <img id="zoomedImage">
+</div>
+
+<script>
+function showPopup(src){
+    document.getElementById("popup").style.display = "flex";
+    document.getElementById("zoomedImage").src = src;
+}
+
+function closeImage(){
+    document.getElementById("popup").style.display = "none";
+}
+</script>
+</body>
+</html>
